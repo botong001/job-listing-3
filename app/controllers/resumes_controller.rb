@@ -23,6 +23,6 @@ end
 private
 
 def resume_params
-  params.require(:resume).permit(:content)
+  params.require(:resume).permit(:content, :attachment)
  end
 end
