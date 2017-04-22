@@ -17,3 +17,58 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
  @import "font-awesome";
+
+.jumbotron {
+  background-image: url('https://ooo.0o0.ooo/2017/04/22/58fb233b65497.jpg');
+  background-repeat: no-repeat;//round 收缩为整图显示
+  background-size: cover;// cover全覆盖 auto半覆盖 contain小图
+  padding-bottom: 550px;
+}
+
+.title {
+  font-family: "Helvetica Neue", "Microsoft Yahei", 微软雅黑;
+  text-align: center;
+  margin-top: 200px;
+  margin-bottom: 80px;
+}
+
+.slogan {
+  margin-top: 10px;
+  margin-bottom: 50px;
+  text-align: center;
+  color: inherit;
+  top: 12px;
+}
+
+.lead {
+  margin-bottom: 200px;
+  text-align: center;
+  color: inherit;
+}
+
+.caption {
+  margin: 100px;
+  text-align: center;
+  top: 20px;
+}
+
+.thumbnail {
+  border: 0 none;
+  box-shadow: none;
+  margin-top: 100px;
+}
+
+.custab {
+  border: 5px solid #ccc;//边框
+
+  padding: 5px;
+  margin: 5% 0;
+  box-shadow: 3px 3px 2px #ccc;//表格阴影
+
+  transition: 0.5s;
+}
+
+.custab:hover{
+  box-shadow: 3px 3px 0px transparent;
+  transition: 0.5s;
+}
