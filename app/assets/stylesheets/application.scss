@@ -121,7 +121,7 @@
 /** 首页大图 **/
 
 .jumbotron {
-  background-image: url('https://ooo.0o0.ooo/2017/04/22/58fb737f08abc.jpg');
+  background-image: image-url('https://ooo.0o0.ooo/2017/04/22/58fb737f08abc.jpg');
   background-repeat: no-repeat;//round 收缩为整图显示
   background-size: cover;// cover全覆盖 auto半覆盖 contain小图
   padding-bottom: 110px;
@@ -201,7 +201,37 @@ border-top-left-radius:  3px;//左上角圆边
   color: inherit;
 }
 
-/** 首页底部 **/
+//---------Content---------
+
+  .content-section-a {
+      padding: 50px 0;
+      background-color: #f8f8f8;
+  }
+
+  .content-section-b {
+      padding: 50px 0;
+      border-top: 1px solid #e7e7e7;
+      border-bottom: 1px solid #e7e7e7;
+  }
+
+  .section-heading-spacer {
+      float: left;
+      width: 200px;
+      border-top: 3px solid #e7e7e7;
+  }
+
+  .section-heading {
+      margin-bottom: 30px;
+  }
+
+  .lead {
+      font-size: 18px;
+      font-weight: 400;
+  }
+
+
+
+/** 底部地址联系方式图标 **/
 
 .caption {
   margin: 30px;
@@ -214,6 +244,18 @@ border-top-left-radius:  3px;//左上角圆边
   box-shadow: none;
   margin-top: 60px;
 }
+
+//---------Footer---------
+
+footer {
+    color: white;
+}
+
+footer .footer-below {
+    padding: 25px 0;
+    background-color: #233140;
+}
+
 
 /** 工作列表按钮样式 **/
 
