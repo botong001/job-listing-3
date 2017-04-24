@@ -136,19 +136,19 @@
   background-image: image-url('header.jpg');
   background-repeat: no-repeat;//round 收缩为整图显示
   background-size: cover;// cover全覆盖 auto半覆盖 contain小图
-  padding-bottom: 110px;
+  padding-bottom: 50px;
 }
 
-.container-fluid .jumbotron{
+.container-fluid .jumbotron{ //图片的位置
     padding-bottom: 200px;//内部的底部边距，这样按钮不会很靠近底部了
     margin: 0 -15px 20px;//顶部margin为0，因此可以直接接着导航栏；左右margin为负15，因此可以顶到浏览器的边缘（抵消 container-fluid 的 15px 左右padding);底部margin为20，会跟下面的内容撑开距离
     border-radius: 0;//圆角为0
   }
 
 .title {
-background-color: rgba(250, 250, 250, 0.39);//背景颜色含透明度
+background-color: rgba(250, 250, 250, 0.69);//背景颜色含透明度
 max-width: 500px;//最大宽度
-margin-top: 600px;//和顶部拉开距离
+margin-top: 200px;//和顶部拉开距离
 margin-bottom: 0;//这样就可以紧接着息面的描述文字
 border-top-right-radius: 3px;//右上角圆边
 border-top-left-radius:  3px;//左上角圆边
@@ -165,10 +165,10 @@ border-top-left-radius:  3px;//左上角圆边
   margin: 0;//上下左右margin为零
   font-size:  30px;//字体大小
   max-width: 500px;//最大宽度
-  background-color: rgba(250, 250, 250, 0.39);//背景颜色含透明度
+  background-color: rgba(250, 250, 250, 0.69);//背景颜色含透明度
   padding: 20px;//上下左右padding为20px
   text-align: left;//文字左对齐
-  color: #FAFAFA;//字体颜色
+  color: #212121;//字体颜色
 
   border-bottom-right-radius: 3px;//右下角圆边
   border-bottom-left-radius: 3px;//左下角圆边
