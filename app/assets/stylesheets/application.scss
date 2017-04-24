@@ -18,6 +18,18 @@
  @import "bootstrap";
  @import "font-awesome";
  @import url(http://fonts.googleapis.com/css?family=Roboto);
+/*** footer置底 ***/
+
+ html {
+    position: relative;
+    min-height: 100%;
+  }
+
+  body {
+    /* Margin bottom by footer height */
+    margin-bottom: 100px;
+  }
+
 
  /****** 注册登录弹窗系统 ******/
  .loginmodal-container {
@@ -121,7 +133,7 @@
 /** 首页大图 **/
 
 .jumbotron {
-  background-image: image-url('https://ooo.0o0.ooo/2017/04/22/58fb737f08abc.jpg');
+  background-image: image-url('header.jpg');
   background-repeat: no-repeat;//round 收缩为整图显示
   background-size: cover;// cover全覆盖 auto半覆盖 contain小图
   padding-bottom: 110px;
@@ -136,7 +148,7 @@
 .title {
 background-color: rgba(250, 250, 250, 0.39);//背景颜色含透明度
 max-width: 500px;//最大宽度
-margin-top: 700px;//和顶部拉开距离
+margin-top: 600px;//和顶部拉开距离
 margin-bottom: 0;//这样就可以紧接着息面的描述文字
 border-top-right-radius: 3px;//右上角圆边
 border-top-left-radius:  3px;//左上角圆边
@@ -204,17 +216,17 @@ border-top-left-radius:  3px;//左上角圆边
 //---------Content---------
 
   .content-section-a {
-      padding: 50px 0;
-      background-color: #f8f8f8;
+      padding: 100px 50px;
+      background-color: #FAFAFA;
   }
 
   .content-section-b {
-      padding: 50px 0;
+      padding: 200px 0;
       border-top: 1px solid #e7e7e7;
       border-bottom: 1px solid #e7e7e7;
   }
 
-  .section-heading-spacer {
+  .section-heading-spacer {//文字上划线
       float: left;
       width: 200px;
       border-top: 3px solid #e7e7e7;
@@ -225,8 +237,8 @@ border-top-left-radius:  3px;//左上角圆边
   }
 
   .lead {
-      font-size: 18px;
-      font-weight: 400;
+      font-size: 50px;
+      font-weight: 600;//字体宽度
   }
 
 
@@ -240,21 +252,28 @@ border-top-left-radius:  3px;//左上角圆边
 }
 
 .thumbnail {
-  border: 0 none;
-  box-shadow: none;
-  margin-top: 60px;
+    border: 0 none;
+    box-shadow: none;
+    margin-top: 60px;
 }
 
 //---------Footer---------
 
-footer {
+.footer {
+  position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 100px;
+    background-color: #757575;
+
+    p {
     color: white;
+    margin-top: 30px;
+  }
 }
 
-footer .footer-below {
-    padding: 25px 0;
-    background-color: #233140;
-}
+
 
 
 /** 工作列表按钮样式 **/
