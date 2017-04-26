@@ -1,7 +1,13 @@
+<div class="col-md-8 col-centered">
+ <div class="panel panel-default">
+  <div class="panel-heading">提交简历</div>
+  <div class="panel-body">
+    <%= simple_form_for [@job, @resume] do |f| %>
+    <%= f.input :content %>
+    <%= f.input :attachment%>
 
-<%= simple_form_for [@job, @resume] do |f| %>
-<%= f.input :content %>
-<%= f.input :attachment %>
-
-<%= f.submit "送出" %>
-<% end %>
+    <%= f.submit "送出", class: "btn btn-info" %>
+    <% end %>
+  </div>
+ </div>
+</div>

@@ -136,12 +136,13 @@
   background-image: image-url('header.jpg');
   background-repeat: no-repeat;//round 收缩为整图显示
   background-size: cover;// cover全覆盖 auto半覆盖 contain小图
-  padding-bottom: 50px;
+  margin-bottom: 50px;
+
 }
 
 .container-fluid .jumbotron{ //图片的位置
-    padding-bottom: 200px;//内部的底部边距，这样按钮不会很靠近底部了
-    margin: 0 -15px 20px;//顶部margin为0，因此可以直接接着导航栏；左右margin为负15，因此可以顶到浏览器的边缘（抵消 container-fluid 的 15px 左右padding);底部margin为20，会跟下面的内容撑开距离
+    padding-bottom: 668px;//内部的底部边距，这样按钮不会很靠近底部了
+    margin: 0 -15px 2px;//顶部margin为0，因此可以直接接着导航栏；左右margin为负15，因此可以顶到浏览器的边缘（抵消 container-fluid 的 15px 左右padding);底部margin为20，会跟下面的内容撑开距离
     border-radius: 0;//圆角为0
   }
 
@@ -298,7 +299,8 @@ border-top-left-radius:  3px;//左上角圆边
 .navbar-default {
   background-color: #757575;//背景颜色
   border-color: #9E9E9E; //边框色
-  margin-bottom: 0; //底部 不撑开距离
+  margin-bottom: 0;
+
 }
 
 @media (min-width: 768px) {
@@ -356,4 +358,8 @@ border-top-left-radius:  3px;//左上角圆边
     height: 40px;//制定图片高度
   }
 
-  /********* *******/
+  /*********common*******/
+.col-centered {
+       float: none;
+       margin: 0 auto;
+}
