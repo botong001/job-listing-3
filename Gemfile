@@ -44,6 +44,7 @@ gem 'carrierwave'
 gem 'will_paginate-bootstrap'
 gem 'ransack'
 gem 'seo_helper'
+gem 'annotate'
 
 
 group :development do
