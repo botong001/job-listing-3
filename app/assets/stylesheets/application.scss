@@ -30,104 +30,69 @@
     margin-bottom: 100px;
   }
 
+  /*********** 导航栏 **************/
 
- /****** 注册登录弹窗系统 ******/
- .loginmodal-container {
-   padding: 30px;
-   max-width: 350px;//宽度
-   width: 100% !important;
-   background-color: rgba(250, 250, 250, 0.39);
-   margin: 0 auto;
-   border-radius: 2px;//边框圆角
-   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-   overflow: hidden;//scroll卷  visible可见的
-   font-family: roboto;
- }
+  .navbar-default {
+    background-color: #757575;//背景颜色
+    border-color: #9E9E9E; //边框色
+    margin-bottom: 0;
 
- .loginmodal-container h1 {
-   text-align: center;
-   font-size: 1.8em;
-   font-family: relative;
- }
+  }
 
- .loginmodal-container input[type=submit] {
-   width: 100%;//按钮宽度
-   display: block;
-   margin-bottom: 10px;//按钮底部边框的宽度
-   position: relative;
- }
+  @media (min-width: 768px) {
+     .navbar {
+       border-radius: 0; //圆角为0
+     }
+   }
 
- .loginmodal-container input[type=text], input[type=password] {
-   height: 44px;//password输入框的宽度
-   font-size: 16px;
-   width: 100%;
-   margin-bottom: 10px;
-   -webkit-appearance: none;
-   background: #fff;//输入框的底色
-   border: 1px solid #d9d9d9;//输入框边框颜色
-   border-top: 1px solid #c0c0c0;//输入框上边框颜色，用来覆盖上面的边框颜色
-   /* border-radius: 2px; */
-   padding: 0 8px;//输入框上下0，左右长度为8px
-   box-sizing: border-box;
-   -moz-box-sizing: border-box;
+  .navbar-default .navbar-brand {
+    color: #EEEEEE; //字体颜色
 
- }
+    padding: 10px 15px; //上下10px, 左右15px
+    line-height: 30px; //文章行高
+  }
 
- .loginmodal-container input[type=text]:hover, input[type=password]:hover {
-   border: 1px solid #b9b9b9;//鼠标移到输入框时，边框的颜色
-   border-top: 1px solid #a0a0a0;
-   -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
-   -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
-   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
- }
+  .navbar-default .navbar-brand:hover,
+  .navbar-default .navbar-brand:focus {
+    color: #BBDEFB; //鼠标放在连接上的文章颜色
 
-/** 下面的有什么用？ **/
- .loginmodal {
-   text-align: center;
-   font-size: 14px;
-   font-family: 'Arial', sans-serif;
-   font-weight: 700;
-   height: 36px;
-   padding: 0 8px;
-   /* border-radius: 3px; */
-  /* -webkit-user-select: none;
-  user-select: none; */
- }
+    background-color: transparent; //鼠标放置在连接上的背景颜色，这里设为透明
+  }
 
- .loginmodal-submit {
-   /* border-radius: 3px; */
-   border: 0px;
-   color: #D84315;
-   text-shadow: 0 1px rgba(0, 0, 0, 0.1);
-   background-color: #D84315;
-   padding: 17px 0px;
-   font-family: roboto;
-   font-size: 14px;
-   /* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#4787ed)); */
+  .navbar-default .navbar-nav > li > a{
+    color: #EEEEEE;
+  }
 
- }
+  .navbar-default .navbar-nav > li > a:hover,
+  .navbar-default .navbar-nav > li > a:focus {
+    color: #BBDEFB;
 
- .loginmodal-submit:hover {
-   /* border: 1px solid #2f5bb7; */
-   border: 0px;
-   text-shadow: 0 1px rgba(0,0,0,0.3);
-   background-color: #D84315;
-   /* background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#4d90fe), to(#357ae8)); */
- }
+    background-color: transparent;
+  }
 
- .loginmodal-container a {
-   text-decoration: none;
-   color: #D84315;//red
-   font-weight: 400;
-   text-align: center;
-   display: inline-block;
-   opacity: 0.6;
-   transition: opacify ease 0.5s;
- }
+  .navbar-default .navbar-nav > .active > a,
+   .navbar-default .navbar-nav > .active > a:hover,
+   .navbar-default .navbar-nav > .active > a:focus {
+     color: #FF5722;
 
- .login-help {
-   font-size: 12px;
- }
+     background-color: #FF5722;
+   }
+
+   .navbar-default .navbar-nav > .open > a,
+    .navbar-default .navbar-nav > .open > a:focus,
+    .navbar-default .navbar-nav > .open > a:hover {
+      background-color: transparent;
+
+      color: #EEEEEE;//点击下拉菜单的颜色
+
+    }
+
+    .navbar-brand > img {
+      display: inline-block; //图片和链接文字显示在同一行
+      margin-right: 30px; //图片和链接文字拉开一点点距离
+      width: 50px;//制定图片宽度
+      height: 40px;//制定图片高度
+    }
 
 
 /** 首页大图 **/
@@ -244,19 +209,6 @@ border-top-left-radius:  3px;//左上角圆边
 
 
 
-/** 底部地址联系方式图标 **/
-
-.caption {
-  margin: 30px;
-  text-align: center;
-  top: 20px;
-}
-
-.thumbnail {
-    border: 0 none;
-    box-shadow: none;
-    margin-top: 60px;
-}
 
 //---------Footer---------
 
@@ -274,15 +226,127 @@ border-top-left-radius:  3px;//左上角圆边
   }
 }
 
+/** 底部地址联系方式图标 **/
+
+.caption {
+  margin: 30px;
+  text-align: center;
+  top: 20px;
+}
+
+.thumbnail {
+    border: 0 none;
+    box-shadow: none;
+    margin-top: 60px;
+}
+
+
+/****** 注册登录弹窗系统 ******/
+.loginmodal-container {
+  padding: 30px;
+  max-width: 350px;//宽度
+  width: 100% !important;
+  background-color: rgba(250, 250, 250, 0.39);
+  margin: 0 auto;
+  border-radius: 2px;//边框圆角
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  overflow: hidden;//scroll卷  visible可见的
+  font-family: roboto;
+}
+
+.loginmodal-container h1 {
+  text-align: center;
+  font-size: 1.8em;
+  font-family: relative;
+}
+
+.loginmodal-container input[type=submit] {
+  width: 100%;//按钮宽度
+  display: block;
+  margin-bottom: 10px;//按钮底部边框的宽度
+  position: relative;
+}
+
+.loginmodal-container input[type=text], input[type=password] {
+  height: 44px;//password输入框的宽度
+  font-size: 16px;
+  width: 100%;
+  margin-bottom: 10px;
+  -webkit-appearance: none;
+  background: #fff;//输入框的底色
+  border: 1px solid #d9d9d9;//输入框边框颜色
+  border-top: 1px solid #c0c0c0;//输入框上边框颜色，用来覆盖上面的边框颜色
+  /* border-radius: 2px; */
+  padding: 0 8px;//输入框上下0，左右长度为8px
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+
+}
+
+.loginmodal-container input[type=text]:hover, input[type=password]:hover {
+  border: 1px solid #b9b9b9;//鼠标移到输入框时，边框的颜色
+  border-top: 1px solid #a0a0a0;
+  -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/** 下面的有什么用？ **/
+.loginmodal {
+  text-align: center;
+  font-size: 14px;
+  font-family: 'Arial', sans-serif;
+  font-weight: 700;
+  height: 36px;
+  padding: 0 8px;
+  /* border-radius: 3px; */
+ /* -webkit-user-select: none;
+ user-select: none; */
+}
+
+.loginmodal-submit {
+  /* border-radius: 3px; */
+  border: 0px;
+  color: #D84315;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.1);
+  background-color: #D84315;
+  padding: 17px 0px;
+  font-family: roboto;
+  font-size: 14px;
+  /* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#4787ed)); */
+
+}
+
+.loginmodal-submit:hover {
+  /* border: 1px solid #2f5bb7; */
+  border: 0px;
+  text-shadow: 0 1px rgba(0,0,0,0.3);
+  background-color: #D84315;
+  /* background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#4d90fe), to(#357ae8)); */
+}
+
+.loginmodal-container a {
+  text-decoration: none;
+  color: #D84315;//red
+  font-weight: 400;
+  text-align: center;
+  display: inline-block;
+  opacity: 0.6;
+  transition: opacify ease 0.5s;
+}
+
+.login-help {
+  font-size: 12px;
+}
 
 
 
 /** 工作列表按钮样式 **/
 
 .custab {
-  border: 5px solid #ccc;//边框
+  border: 0px solid #ccc;//边框
 
-  padding: 5px;
+  padding: 2px;
   margin: 5% 0;
   box-shadow: 3px 3px 2px #ccc;//表格阴影
 
@@ -294,69 +358,6 @@ border-top-left-radius:  3px;//左上角圆边
   transition: 0.5s;
 }
 
-/*********** 导航栏 **************/
-
-.navbar-default {
-  background-color: #757575;//背景颜色
-  border-color: #9E9E9E; //边框色
-  margin-bottom: 0;
-
-}
-
-@media (min-width: 768px) {
-   .navbar {
-     border-radius: 0; //圆角为0
-   }
- }
-
-.navbar-default .navbar-brand {
-  color: #EEEEEE; //字体颜色
-
-  padding: 10px 15px; //上下10px, 左右15px
-  line-height: 30px; //文章行高
-}
-
-.navbar-default .navbar-brand:hover,
-.navbar-default .navbar-brand:focus {
-  color: #BBDEFB; //鼠标放在连接上的文章颜色
-
-  background-color: transparent; //鼠标放置在连接上的背景颜色，这里设为透明
-}
-
-.navbar-default .navbar-nav > li > a{
-  color: #EEEEEE;
-}
-
-.navbar-default .navbar-nav > li > a:hover,
-.navbar-default .navbar-nav > li > a:focus {
-  color: #BBDEFB;
-
-  background-color: transparent;
-}
-
-.navbar-default .navbar-nav > .active > a,
- .navbar-default .navbar-nav > .active > a:hover,
- .navbar-default .navbar-nav > .active > a:focus {
-   color: #FF5722;
-
-   background-color: #FF5722;
- }
-
- .navbar-default .navbar-nav > .open > a,
-  .navbar-default .navbar-nav > .open > a:focus,
-  .navbar-default .navbar-nav > .open > a:hover {
-    background-color: transparent;
-
-    color: #EEEEEE;//点击下拉菜单的颜色
-
-  }
-
-  .navbar-brand > img {
-    display: inline-block; //图片和链接文字显示在同一行
-    margin-right: 30px; //图片和链接文字拉开一点点距离
-    width: 50px;//制定图片宽度
-    height: 40px;//制定图片高度
-  }
 
   /*********common*******/
 .col-centered {

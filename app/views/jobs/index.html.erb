@@ -3,7 +3,7 @@
   <div class="panel-heading">
     <h3>
       求职列表
-    
+
       <div class="dropdown clearfix pull-right">
         <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuDivider" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
          排序
@@ -48,10 +48,7 @@
         <td>
           <%= job.created_at %>
         </td>
-        <td>
-          <%= link_to("Edit", edit_job_path(job)) %> |
-          <%= link_to("Destroy", job_path(job), :method => :delete, :data => { :confirm => "Are you sure?" }) %>
-        </td>
+
       </tr>
       <% end %>
     </tbody>
@@ -59,3 +56,7 @@
   </div>
  </div>
 </div>
+
+<div class="text-center">
+ <%= will_paginate @jobs, renderer: BootstrapPagination::Rails %>
+ </div>
