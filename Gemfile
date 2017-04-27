@@ -43,6 +43,7 @@ gem 'font-awesome-rails'
 gem 'carrierwave'
 gem 'will_paginate-bootstrap'
 gem 'ransack'
+gem 'seo_helper'
 
 
 group :development do

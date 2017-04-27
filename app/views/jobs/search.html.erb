@@ -39,7 +39,7 @@
               <% @jobs.each do |job| %>
               <tr>
                 <td>
-                  <%= link_to(job.title, job_path(job))%>
+                  <%= link_to(render_highlight_content(job,@query_string),job_path(job)) %>
                 </td>
                 <td>
                   <%= job.description%>
