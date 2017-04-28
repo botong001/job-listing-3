@@ -45,6 +45,7 @@ gem 'will_paginate-bootstrap'
 gem 'ransack'
 gem 'seo_helper'
 gem 'annotate'
+gem 'local_time'
 
 
 group :development do

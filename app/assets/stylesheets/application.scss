@@ -358,6 +358,11 @@ border-top-left-radius:  3px;//左上角圆边
   transition: 0.5s;
 }
 
+/** 分页按钮样式 **/
+
+.pagination>li>a, .pagination>li>span { border-radius: 20% !important;margin: 0 5px;}
+
+
 
   /*********common*******/
 .col-centered {
