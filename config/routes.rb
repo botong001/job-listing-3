@@ -6,7 +6,8 @@ Rails.application.routes.draw do
     resources :resumes
     collection do
       get :search
-    end 
+      get :city
+    end
   end
 
   namespace :admin do

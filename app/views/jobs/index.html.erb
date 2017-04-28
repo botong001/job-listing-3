@@ -33,7 +33,7 @@
           <td>薪资下限</td>
           <td>薪资上限</td>
           <td>刊登时间</td>
-        </td>
+          <td>职缺位于</td>
       </thead>
       <tbody>
       <% @jobs.each do |job| %>
@@ -50,6 +50,9 @@
         <td>
           <%= local_time(job.created_at, '%B %e, %Y %l:%M%p') %>
         </td>
+      <td>
+        <%= job.city %>
+      </td>
 
       </tr>
       <% end %>

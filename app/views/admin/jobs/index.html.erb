@@ -1,3 +1,6 @@
+<%= render "jobs/search_bar" %>
+
+<div class="col-md-11 col-centered">
 <div class="panel panel-primary">
   <div class="panel-heading">
     <h3>
@@ -15,6 +18,7 @@
           <td>薪资下限</td>
           <td>薪资上限</td>
           <td>刊登时间</td>
+          <td>职缺位于</td>
           <td>职位管理</td>
         </td>
       </thead>
@@ -31,7 +35,10 @@
           <%= job.wage_upper_bound %>
         </td>
         <td>
-          <%= job.created_at %>
+          <%= local_time(job.created_at, '%B %e, %Y %l:%M%p') %>
+        </td>
+        <td>
+          <%= job.city %>
         </td>
 
         <td>
