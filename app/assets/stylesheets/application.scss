@@ -180,10 +180,14 @@ border-top-left-radius:  3px;//左上角圆边
 }
 
 //---------Content---------
-
+  .circular--squareP{
+    border-radius:50%;
+  }
+  
   .content-section-a {
       padding: 100px 50px;
       background-color: #FAFAFA;
+
   }
 
   .content-section-b {
