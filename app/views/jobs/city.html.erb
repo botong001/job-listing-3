@@ -28,7 +28,7 @@
               <td>职缺位于</td>
             </tr>
           </thead>
-
+          
           <tbody>
             <% @jobs.each do |job| %>
             <tr>
@@ -54,7 +54,6 @@
            <% end %>
           </tbody>
         </table>
-
 
       <div class="text-center">
         <%= will_paginate @jobs, renderer: BootstrapPagination::Rails %>
