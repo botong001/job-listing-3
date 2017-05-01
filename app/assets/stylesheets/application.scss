@@ -89,128 +89,25 @@
 
     .navbar-brand > img {
       display: inline-block; //图片和链接文字显示在同一行
-      margin-right: 30px; //图片和链接文字拉开一点点距离
-      width: 50px;//制定图片宽度
-      height: 40px;//制定图片高度
+      margin-right: 15px; //图片和链接文字拉开一点点距离
+      margin-bottom: 5px;
+      width: 35px;//制定图片宽度
+      height: 30px;//制定图片高度
     }
 
 
-/** 首页大图 **/
-
-.jumbotron {
-  background-image: image-url('header.jpg');
-  background-repeat: no-repeat;//round 收缩为整图显示
-  background-size: cover;// cover全覆盖 auto半覆盖 contain小图
-  margin-bottom: 50px;
+//-- welcome/index 中间部分
+.thumbnail{
+  border-color: rgba(250, 250, 250, 0.39);//边框透明
+}
+.thumbnail img{
+  width: 50%;
 
 }
-
-.container-fluid .jumbotron{ //图片的位置
-    padding-bottom: 668px;//内部的底部边距，这样按钮不会很靠近底部了
-    margin: 0 -15px 2px;//顶部margin为0，因此可以直接接着导航栏；左右margin为负15，因此可以顶到浏览器的边缘（抵消 container-fluid 的 15px 左右padding);底部margin为20，会跟下面的内容撑开距离
-    border-radius: 0;//圆角为0
-  }
-
-.title {
-background-color: rgba(250, 250, 250, 0.69);//背景颜色含透明度
-max-width: 500px;//最大宽度
-margin-top: 200px;//和顶部拉开距离
-margin-bottom: 0;//这样就可以紧接着息面的描述文字
-border-top-right-radius: 3px;//右上角圆边
-border-top-left-radius:  3px;//左上角圆边
-}
-
-.jumbotron h1, .jumbotron .h1 {
-  text-align: left;//文字左对齐
-  color: #212121; //大字颜色
-
-  padding: 50px 20px 0;//上50px，左右20px， 下0
-}
-
-.jumbotron p {
-  margin: 0;//上下左右margin为零
-  font-size:  30px;//字体大小
-  max-width: 500px;//最大宽度
-  background-color: rgba(250, 250, 250, 0.69);//背景颜色含透明度
-  padding: 20px;//上下左右padding为20px
-  text-align: left;//文字左对齐
-  color: #212121;//字体颜色
-
-  border-bottom-right-radius: 3px;//右下角圆边
-  border-bottom-left-radius: 3px;//左下角圆边
-
-}
-
-.btn-danger { //其他的 btn-default、btn-info、btn-success 等依样画葫芦修改即可
-  color:  #fff;//字体颜色
-
-  background-color: #F9A825;//背景颜色
-
-  border-color:  #F9A825//边框颜色
-
-}
-
-.btn-danger:hover {
-  background-color: #E65100;//鼠标放置在btn上的背景颜色
-
-  border-color: #E65100;//鼠标放置在btn上的边框颜色
-}
-
-.btn-lg, .btn-group-lg > .btn {  //btn-xs btn-sm btn-lg 对应不同的按钮尺寸
-  padding: 8px 16px;//通过padding来决定btn的大小
-  font-size: 20px;//btn文字大小
-  letter-spacing: 3px;//调整文字间距
-  border-radius: 3px;//btn圆角
-  width: 200px;//这里用制定宽度把btn拉得更长
-
-}
-
-.slogan {
-  margin-top: 10px;
-  margin-bottom: 20px;
+.caption{
   text-align: center;
-  color: inherit;
-  top: 12px;
+  margin-top: 45px;
 }
-
-.lead {
-  margin-bottom: 60px;
-  text-align: center;
-  color: inherit;
-}
-
-//---------Content---------
-  .circular--squareP{
-    border-radius:50%;
-  }
-  
-  .content-section-a {
-      padding: 100px 50px;
-      background-color: #FAFAFA;
-
-  }
-
-  .content-section-b {
-      padding: 200px 0;
-      border-top: 1px solid #e7e7e7;
-      border-bottom: 1px solid #e7e7e7;
-  }
-
-  .section-heading-spacer {//文字上划线
-      float: left;
-      width: 200px;
-      border-top: 3px solid #e7e7e7;
-  }
-
-  .section-heading {
-      margin-bottom: 30px;
-  }
-
-  .lead {
-      font-size: 50px;
-      font-weight: 600;//字体宽度
-  }
-
 
 
 
@@ -230,19 +127,7 @@ border-top-left-radius:  3px;//左上角圆边
   }
 }
 
-/** 底部地址联系方式图标 **/
 
-.caption {
-  margin: 30px;
-  text-align: center;
-  top: 20px;
-}
-
-.thumbnail {
-    border: 0 none;
-    box-shadow: none;
-    margin-top: 60px;
-}
 
 
 /****** 注册登录弹窗系统 ******/

@@ -9,16 +9,16 @@
     <ul class="nav navbar-nav">
         <li style="font-size: 0.4em; color: white; margin-top: 0.8em; margin-left: 2em;">
             <% if @cuery_string.blank?%>
-                普洱
+
             <% else %>
                 <%= @cuery_string %>
             <% end %>
         </li>
         <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="font-size: 0.5em; margin: auto;" >[切换城市]<span class="caret"></span></a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="font-size: 0.5em; margin: auto;" >[按地理位置搜索]<span class="caret"></span></a>
             <ul class="dropdown-menu" id="bootstrap-override-1">
                 <ul class="list-inline" style="30px;">
-                    <li><%= link_to("普洱", jobs_path, class: "bootstrap-override-2") %></li>
+                    <li><%= link_to("全部", jobs_path, class: "bootstrap-override-2") %></li>
                     <li><%= link_to("思茅区", city_jobs_path(c:"思茅区"), class: "bootstrap-override-2") %></li>
                     <li><%= link_to("澜沧", city_jobs_path(c:"澜沧"), class: "bootstrap-override-2") %></li>
                     <li><%= link_to("惠民", city_jobs_path(c:"惠民"), class: "bootstrap-override-2") %></li>
