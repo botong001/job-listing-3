@@ -22,7 +22,7 @@
            <%= link_to("按照发表时间排序", jobs_path ) %>
          </li>
        </ul>
-       </div>
+        </div>
     </h3>
   </div>
   <div class="panel-body">
@@ -33,6 +33,7 @@
           <td>薪资下限</td>
           <td>薪资上限</td>
           <td>刊登时间</td>
+          <td>工作分类</td>
           <td>职缺位于</td>
       </thead>
       <tbody>
@@ -49,6 +50,9 @@
         </td>
         <td>
           <%= local_time(job.created_at, '%B %e, %Y %l:%M%p') %>
+        </td>
+        <td>
+        <%= job.category %>
         </td>
       <td>
         <%= job.city %>

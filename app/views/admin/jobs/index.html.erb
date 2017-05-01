@@ -18,6 +18,7 @@
           <td>薪资下限</td>
           <td>薪资上限</td>
           <td>刊登时间</td>
+          <td>工作分类</td>
           <td>职缺位于</td>
           <td>职位管理</td>
         </td>
@@ -36,6 +37,9 @@
         </td>
         <td>
           <%= local_time(job.created_at, '%B %e, %Y %l:%M%p') %>
+        </td>
+        <td>
+          <%= job.category %>
         </td>
         <td>
           <%= job.city %>

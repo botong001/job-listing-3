@@ -5,6 +5,7 @@
             <a class="navbar-brand" href="/"><img src='<%= image_url 'logo.png' %>' >Welcome to Tea City of China</a>
         </div>
 
+<!-- 城市分类-->
         <div class="city-change">
     <ul class="nav navbar-nav">
         <li style="font-size: 0.4em; color: white; margin-top: 0.8em; margin-left: 2em;">
@@ -30,6 +31,32 @@
     </ul>
 </div>
 
+<!--工作分类
+
+<div class="category-change">
+    <ul class="nav navbar-nav">
+        <li style="font-size: 0.4em; color: white; margin-top: 0.8em; margin-left: 2em;">
+            <% if @juery_string.blank?%>
+
+            <% else %>
+                <%= @juery_string %>
+            <% end %>
+        </li>
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="font-size: 0.5em; margin: auto;" >[工作分类]<span class="caret"></span></a>
+            <ul class="dropdown-menu" id="bootstrap-override-1">
+                <ul class="list-inline" style="30px;">
+                    <li><%= link_to("全部职缺", jobs_path, class: "bootstrap-override-2") %></li>
+                    <li><%= link_to("生物产业", category_jobs_path(j:"生物产业"), class: "bootstrap-override-2") %></li>
+                    <li><%= link_to("畜牧业", category_jobs_path(j:"畜牧业"), class: "bootstrap-override-2") %></li>
+                    <li><%= link_to("旅游业", category_jobs_path(j:"旅游业"), class: "bootstrap-override-2") %></li>
+                    <li><%= link_to("交通运输", category_jobs_path(j:"交通运输"), class: "bootstrap-override-2") %></li>
+                    <li><%= link_to("软件工程师", category_jobs_path(j:"软件工程师"), class: "bootstrap-override-2") %></li>
+                </ul>
+            </ul>
+        </li>
+    </ul>
+</div>-->
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
