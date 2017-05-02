@@ -98,24 +98,30 @@
 
 //-- welcome/index 中间部分
 .thumbnail{
-  border-color: rgba(250, 250, 250, 0.39);//边框透明
+  border-color: #EEEEEE;//边框透明
+  background-color: #EEEEEE;
+  text-align: center;
 }
 .thumbnail img{
-  width: 50%;
+  width: 40%;
 
 }
-.caption{
+
+.thumbnail1{
   text-align: center;
-  margin-top: 45px;
+  background-color: #FAFAFA;
 }
-
-
-
-.thumbnail2 img{
+.thumbnail1 img{
   width: 20%;
-  margin-left: 220px;
 
 }
+
+.caption{
+  margin-top: 60px;
+
+}
+
+
 
 
 

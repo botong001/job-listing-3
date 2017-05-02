@@ -3,6 +3,7 @@ class JobsController < ApplicationController
   before_action :validate_search_key, only: [:search]
   before_action :validate_city_key, only: [:city]
   before_action :validate_category_key, only: [:category]
+  layout "admin"
 
   def show
     @job = Job.find(params[:id])

@@ -15,9 +15,45 @@
     <%= render "common/flashes" %>
     <div class="row">
       <div class="col-md-2">
-        <ul class="nav nav-pills nav-stacked" style="max-width: 200px; padding-top:50px; margin-left:100px;">
-          <li class="active "><%= link_to("User", jobs_path ) %> </li>
-
+        <ul class="nav nav-pills nav-stacked" style="max-width: 150px; padding-top:30px; margin-left:30px;">
+          <div class="panel-body">
+            <table class="table table-boldered">
+            <thead>
+             <tr>
+                 <th><h3>岗位分类</h3></th>
+               </tr>
+             </thead>
+                <tr>
+                 <td>
+                 <a href="/jobs/category?j=林产业"><h4>林产业</h4></a>
+                </td>
+                </tr>
+                <tr>
+               <td>
+                 <a href="/jobs/category?j=旅游服务业"><h4>旅游服务业</h4></a>
+               </td>
+             </tr>
+             <tr>
+               <td>
+             <a href="/jobs/category?j=畜牧业"><h4>畜牧业</h4></a></td>
+            </td>
+            </tr>
+             <tr>
+            <td>
+             <a href="/jobs/category?j=生物产业"><h4>生物产业</h4></a>
+           </td>
+            </tr>
+             <tr>
+            <td>
+            <a href="/jobs/category?j=工程师"><h4>工程师</h4></a>
+          </td>
+          </tr>
+          <tr>
+          <td>
+          <a href="/jobs/category?j=交通运输"><h4>交通运输</h4></a>
+         </td>
+         </tr>
+        </table>
         </ul>
       </div>
 
