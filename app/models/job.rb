@@ -27,6 +27,10 @@ class Job < ApplicationRecord
   scope :published, -> { where(is_hidden: false) }
   scope :recent , -> { order('created_at DESC') }
 
+# --已投履历--
+  has_many :resume_relationship
+  has_many :postmens, through: :resume_relationship, source: :user
+
 # -----收藏----
   has_many :collects
   has_many :members, through: :collects, source: :user
