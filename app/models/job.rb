@@ -14,11 +14,24 @@
 #
 
 class Job < ApplicationRecord
+  has_many :resumes
+
+# ----------
   validates :title, presence: true
   validates :wage_upper_bound, presence: true
   validates :wage_lower_bound, presence: true
   validates :wage_lower_bound, numericality: { greater_than: 0}
 
+
+# ----------
+  scope :published, -> { where(is_hidden: false) }
+  scope :recent , -> { order('created_at DESC') }
+
+# -----收藏----
+  has_many :collects
+  has_many :members, through: :collects, source: :user
+
+# -----------
   def publish!
     self.is_hidden = false
     self.save
@@ -28,8 +41,4 @@ class Job < ApplicationRecord
     self.is_hidden = true
     self.save
   end
-
-  scope :published, -> { where(is_hidden: false) }
-  scope :recent , -> { order('created_at DESC') }
-  has_many :resumes
 end

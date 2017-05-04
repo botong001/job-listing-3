@@ -3,12 +3,16 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :jobs do
-    resources :resumes
+    member do
+      post :join
+      post :quit
+    end
     collection do
       get :search
       get :city
       get :category
     end
+    resources :resumes
   end
 
   namespace :admin do
@@ -20,6 +24,6 @@ Rails.application.routes.draw do
     end
   end
   root 'welcome#index'
-  
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

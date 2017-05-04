@@ -1,5 +1,5 @@
 class JobsController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :create, :update, :edit, :destroy]
+  before_action :authenticate_user!, only: [:new, :create, :update, :edit, :destroy, :jion, :quit]
   before_action :validate_search_key, only: [:search]
   before_action :validate_city_key, only: [:city]
   before_action :validate_category_key, only: [:category]
@@ -55,6 +55,36 @@ class JobsController < ApplicationController
     @job.destroy
     redirect_to jobs_path
   end
+
+# --collect--
+
+  def join
+    @job = Job.find(params[:id])
+
+     if !current_user.is_member_of?(@job)
+       current_user.join_collect!(@job)
+       flash[:notice] = "收藏成功"
+     else
+       flash[:warning] = "你已收藏改岗位"
+     end
+
+     redirect_to job_path(@job)
+   end
+
+   def quit
+     @job= Job.find(params[:id])
+
+     if current_user.is_member_of?(@job)
+       current_user.quit_collect!(@job)
+       flash[:alert] = "已移除收藏夹"
+     else
+       flash[:warning] = "XD"
+     end
+
+     redirect_to job_path(@job)
+   end
+
+ # --search--
 
   def search
     if @query_string.present?

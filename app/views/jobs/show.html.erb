@@ -1,3 +1,16 @@
+<div class="container">
+           <% if current_user && current_user.is_member_of?(@job) %>
+           <%= link_to quit_job_path(@job), method: :post, class: "btn btn-xs btn-danger pull-right" do%>
+           <i class="fa fa-bookmark-o">
+               取消收藏</i><% end %>
+       <% else %>
+           <%= link_to join_job_path(@job), method: :post, class: "btn btn-xs btn-success pull-right" do%>
+           <i class="fa fa-bookmark">
+               收藏匠职</i><% end %>
+           <% end %>
+       </div>
+   </div>
+
 
 <h1> <%= @job.title %> </h1>
 
