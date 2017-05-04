@@ -2,7 +2,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-    <h2>您收藏的岗位</h2>
+    <h2>您收藏的岗位列表</h2>
 
     <div>
         <table class="table table-boldered table-striped">
@@ -11,40 +11,28 @@
                     <td>职位</td>
                     <td>竞征人数</td>
                     <td>状态</td>
-                    <td>收藏</td>
-
                 </tr>
             </thead>
+
             <tbody>
                 <% @collect_jobs.each do |job| %>
                 <tr>
                     <td><%= link_to(job.title, job_path(job)) %></td>
-
                     <td><%= job.resumes.count %></td>
                     <td>
                     <% if current_user && current_user.has_postmen_of?(job) %>
                         <%= link_to("已应征", new_job_resume_path(job), class: "btn btn-xs btn-success disabled", method: :get) %>
-                      <% else %>
+                    <% else %>
                         <%= link_to("应征", new_job_resume_path(job), class: "btn btn-xs btn-success", method: :get) %>
-                      <% end %>
+                    <% end %>
                     </td>
-                    <td>
-                          <% if current_user && current_user.is_member_of?(job) %>
-                          <i class="fa fa-bookmark"></i>
-                      <% else %>
-                          <i class="fa fa-bookmark-o"></i>
-                          <% end %>
-                      </td>
                 </tr>
-                <% end %>
+              <% end %>
             </tbody>
         </table>
     </div>
-
-<br /><br /><br /><br />
-
-  <h2>您投履历的岗位</h2>
-
+<br /><br /><br /><br /><br /><br /><br /><br />
+  <h2>您已投履历的岗位列表</h2>
     <div>
         <table class="table table-boldered table-striped">
             <thead>
@@ -52,7 +40,6 @@
                     <td>匠职</td>
                     <td>竞征人数</td>
                     <td>收藏</td>
-                    <td>状态</td>
                     <!-- <td>操作</td> -->
                 </tr>
             </thead>
@@ -60,14 +47,19 @@
                 <% @post_jobs.each do |job| %>
                 <tr>
                     <td><%= link_to(job.title, job_path(job)) %></td>
-
                     <td><%= job.resumes.count %></td>
-
+                    <td>
+                      <% if current_user && current_user.is_member_of?(job) %>
+                      <i class="fa fa-bookmark"></i>
+                      <% else %>
+                      <i class="fa fa-bookmark-o"></i>
+                      <% end %>
+                    </td>
                 </tr>
                 <% end %>
             </tbody>
         </table>
-    </div>
-  </div>
-</div>
+     </div>
+   </div>
+ </div>
 </div>

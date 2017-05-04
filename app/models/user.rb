@@ -64,9 +64,8 @@ has_many :post_jobs, :through => :resume_relationship, :source => :job
 
 # ------------
 
-       def admin?
-         is_admin
-       end
+   def admin?
+     is_admin
+   end
 
-
-      end
+  end
