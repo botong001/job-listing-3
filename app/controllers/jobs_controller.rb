@@ -3,7 +3,7 @@ class JobsController < ApplicationController
   before_action :validate_search_key, only: [:search]
   before_action :validate_city_key, only: [:city]
   before_action :validate_category_key, only: [:category]
-  layout "admin"
+
 
   def show
     @job = Job.find(params[:id])
@@ -30,6 +30,7 @@ class JobsController < ApplicationController
 
   def create
     @job = Job.new(job_params)
+    @job.user = current_user
     if @job.save
       redirect_to jobs_path
     else
@@ -56,6 +57,7 @@ class JobsController < ApplicationController
     redirect_to jobs_path
   end
 
+
 # --collect--
 
   def join
@@ -64,10 +66,7 @@ class JobsController < ApplicationController
      if !current_user.is_member_of?(@job)
        current_user.join_collect!(@job)
        flash[:notice] = "收藏成功"
-     else
-       flash[:warning] = "你已收藏改岗位"
      end
-
      redirect_to job_path(@job)
    end
 
@@ -77,8 +76,6 @@ class JobsController < ApplicationController
      if current_user.is_member_of?(@job)
        current_user.quit_collect!(@job)
        flash[:alert] = "已移除收藏夹"
-     else
-       flash[:warning] = "XD"
      end
 
      redirect_to job_path(@job)
